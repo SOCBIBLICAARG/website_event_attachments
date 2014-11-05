@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<record id="view_website_event_attachments_config_settings" model="ir.ui.view">
+            <field name="name">Website Event Attachments settings</field>
+            <field name="model">website_event_attachments.config.settings</field>
+            <field name="arch" type="xml">
+                <form string="Configure Website Event Attachments" class="oe_form_configuration">
+                    <header>
+                        <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" type="object" name="cancel" class="oe_link"/>
+                    </header>
+                    <div>
+                        <field name="website_id" invisible="True" on_change="on_change_website_id(website_id)"/>
+                        <group string="Visibility">
+                            <label for="show_in_event_list"/>
+                            <div name="show_in_event_list">
+                                <div>
+                                    <div name="show_in_event_list" class="oe_inline">
+                                        <field name="show_in_event_list" placeholder="0"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </group>
+                        
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_website_event_attachments_configuration" model="ir.actions.act_window">
+            <field name="name">Website Event Attachments Settings</field>
+            <field name="res_model">website_event_attachments.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+
+        <menuitem id="menu_website_event_attachments_configuration" parent="base.menu_config"
+            sequence="90" action="action_website_event_attachments_configuration"/>
+
+</data>
+</openerp>

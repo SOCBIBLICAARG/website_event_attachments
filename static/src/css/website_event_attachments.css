@@ -1,0 +1,33 @@
+
+.label-attachments {
+	color: #000;
+	display: block;
+}
+
+.panel-attachments {
+	
+}
+
+.panel-attachments ul {
+	
+}
+
+.panel-attachments ul li {
+	
+}
+
+#panel-body-attachments li:before {
+	content: "";
+}
+
+#panel-body-attachments li:first-of-type:before {
+	content: "";
+}
+
+#label-attachments a:before {
+	content: ", ";
+	margin-left: -3px;
+}
+#label-attachments a:first-of-type:before {
+	content: "";
+}
